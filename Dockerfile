@@ -6,4 +6,4 @@ RUN echo "$(java -version)"
 RUN sbt stage
 
 EXPOSE 9000
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["./target/universal/stage/bin/play-getting-started -Dhttp.port=${PORT}"]
